@@ -57,12 +57,12 @@ export default class App extends Component {
   }
   renderCont=(obj)=>{return (
     <li key={obj.content}>
-      {obj.content} <span>{obj.time}</span>
+      <pre>{obj.content}</pre><span id="time">{obj.time}</span>
       <Content2 cont={obj.content} add={(cont2, cont)=>{this.setCont2(cont2, cont)}} />
     <ul>{obj.content2.map(this.renderCont2)}</ul>
     </li>);}
   renderCont2=(arr)=>{
-    return <li key={arr.item}>{arr.item}<span>{arr.time}</span></li>;
+    return <li key={arr.item}><pre>{arr.item}</pre><span id="time">{arr.time}</span></li>;
   }
 
 

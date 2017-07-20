@@ -18,11 +18,15 @@ export default class Content extends Component{
   render() {
     return (
         <form onSubmit={this.onContentSubmit}>
-          <input
+          <textarea
+            placeholder="Comment here!"
+            id="cta"
+            rows="4"
+            cols="50"
             className="control-form"
             value={this.state.content}
             onChange={event => this.onContentChange(event.target.value)} />
-          <button type="submit" className="btn btn-secondary">
+          <button id="ctb" type="submit" className="btn btn-secondary">
             Submit
           </button>
         </form>

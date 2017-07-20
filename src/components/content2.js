@@ -22,12 +22,15 @@ export default class Content2 extends Component {
   render() {
     return (
       <form onSubmit={this.handleChange}>
-        <input
+        <textarea
+          placeholder="Reply here!"
+          rows="3"
+          cols="40"
           type="text"
           value={this.state.text}
           onChange={this.onChange}
         />
-        <button type="submit" className="btn btn-secondary">
+        <button id="ctb2" type="submit" className="btn btn-secondary">
           Reply
         </button>
       </form>
